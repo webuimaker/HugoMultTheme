@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" dir="ltr">
+  {{ partial "head.html" . }}
+  <body class="single-body">
+    {{ partial "nav-bar.html" . }}
+    <main class="content side-text-padding">
+      
+    </main>
+    <nav class="end-nav side-padding">
+      {{ with .PrevInSection }}
+      {{ .Render "li-next" }}
+      {{ end }}
+      {{ partial "home-card.html" . }}
+    </nav>
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
